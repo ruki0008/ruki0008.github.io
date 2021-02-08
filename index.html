@@ -7,98 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript">
+      window.addEventListener("scroll", function() {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      })
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        const hum = $('#hamburger, .close')
+        const nav = $('.sp-nav')
+        hum.on('click', function() {
+          nav.toggleClass('toggle');
+        });
+      });
+    </script>
   </head>
+
   <body>
-    <header id="header">
-      <div class="top">
-        <h1 class="site-title"><img src="img/logo.svg" alt="portfolio"></h1>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <h2>Hamaguchi Ruki</h2>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2 class="sec-title">About</h2>
-        <div class="about-content wrapper">
-          <p>東京在住 25歳</p>
-          <p>HTML,CSSの学習を現在しております。</p>
-          <a class="btn" href="#"><span>Read More</span></a>
+    <div class="wrap">
+      <header id="header">
+        <a href="#" class="pc-site-title">Portfolio</a>
+        <a href="#" class="sp-site-title">Portfolio</a>
+        <nav class="pc-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="sp-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="close"><span>閉じる</span></li>
+          </ul>
+        </nav>
+        <div id="hamburger">
+          <span></span>
         </div>
+      </header>
+      <section class="banner">
+        <h1>Hamaguchi Ruki</h1>
       </section>
 
-      <section id="works">
-        <h2 class="sec-title">Works</h2>
-        <div class="works-content wrapper">
-          <div class="works-item">
-            <h3 class="item-title">架空サイト</h3>
-            <p>模写をして作成した架空サイトです。</p>
+      <main>
+        <section id="about">
+          <h2 class="sec-title">About</h2>
+          <div class="about-content wrapper">
+            <p>東京在住 25歳</p>
+            <p>HTML,CSSの学習を現在しております。</p>
+            <a class="btn" href="#"><span>Read More</span></a>
           </div>
-          <div class="works-item">
-            <h3 class="item-title">○○○○○</h3>
-            <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
-          </div>
-          <div class="works-item">
-            <h3 class="item-title">○○○○○</h3>
-            <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
-          </div>
-          <div class="works-item">
-            <h3 class="item-title">○○○○○</h3>
-            <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="skills">
-        <h2 class="sec-title">Skills</h2>
-        <div class="skills-content wrapper">
-          <dl class="item">
-            <dt><img src="img/html-5.svg" alt="html-img"></dt>
-            <dd>基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。</dd>
-            <dd>
-              <div class="rate">
-                <span class="star5-rating" data-rate="4"></span>
-              </div>
-            </dd>
-          </dl>
-          <dl class="item">
-            <dt><img src="img/css-3.svg" alt="html-img"></dt>
-            <dd>基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。</dd>
-            <dd>
-              <div class="rate">
-                <span class="star5-rating" data-rate="4"></span>
-              </div>
-            </dd>
-          </dl>
-          <dl class="item">
-            <dt><img src="img/javascript.svg" alt="html-img"></dt>
-            <dd>基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。基礎知識はすべてドットインストールで学習しました。</dd>
-            <dd>
-              <div class="rate">
-                <span class="star5-rating" data-rate="4"></span>
-              </div>
-            </dd>
-          </dl>
-        </div>
-      </section>
+        <section id="works">
+          <h2 class="sec-title">Works</h2>
+          <div class="works-content wrapper">
+            <div class="works-item">
+              <h3 class="item-title">○○○○○</h3>
+              <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
+            </div>
+            <div class="works-item">
+              <h3 class="item-title">○○○○○</h3>
+              <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
+            </div>
+            <div class="works-item">
+              <h3 class="item-title">○○○○○</h3>
+              <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
+            </div>
+            <div class="works-item">
+              <h3 class="item-title">○○○○○</h3>
+              <p>○○○○○○○○○○○○○○○○○○○○○○○○○</p>
+            </div>
+          </div>
+        </section>
 
-      <section id="contact">
-        <h2 class="sec-title">Contact</h2>
-        <div class="contact-content wrapper">
-          <h1>名前</h1>
-          <h1>メールアドレス</h1>
-        </div>
-      </section>
-    </main>
+        <section id="skills">
+          <h2 class="sec-title">Skills</h2>
+          <div class="skills-content wrapper">
+            <dl class="item">
+              <dt><img src="img/html-5.svg" alt="html-img"></dt>
+              <dd>基礎知識はドットインストールでその他の知識はポートフォリオを作成していく中で分からないことをwebページやyoutubeなどで学習しました。基礎の部分は自分で記述出来ます。</dd>
+              <dd>
+                <div class="rate">
+                  <span class="star5-rating" data-rate="3"></span>
+                </div>
+              </dd>
+            </dl>
+            <dl class="item">
+              <dt><img src="img/css-3.svg" alt="html-img"></dt>
+              <dd>基礎知識はドットインストールでその他の知識はポートフォリオを作成していく中で分からないことをwebページやyoutubeなどで学習しました。基礎の部分は自分で記述出来ます。</dd>
+              <dd>
+                <div class="rate">
+                  <span class="star5-rating" data-rate="3"></span>
+                </div>
+              </dd>
+            </dl>
+            <dl class="item">
+              <dt><img src="img/javascript.svg" alt="html-img"></dt>
+              <dd>基礎知識は書籍で学習しました。まだ未熟なので参考のコードなどを見ながらでしか記述することが出来ないです。</dd>
+              <dd>
+                <div class="rate">
+                  <span class="star5-rating" data-rate="1"></span>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </section>
 
-    <footer>
-      コピー
-    </footer>
-    <script src="app.js"></script>
+        <section id="contact">
+          <h2 class="sec-title">Contact</h2>
+          <div class="contact-content wrapper">
+            <form action="#" method="post">
+              <dl>
+                <dt><label for="name">NAME</label></dt>
+                <dd><input type="text" id="name" name="your-name"></dd>
+                <dt><label for="email">E-mail</label></dt>
+                <dd><input type="email" id="email" name="your-email"></dd>
+                <dt><label for="message">MESSAGE</label></dt>
+                <dd><textarea id="message" name="your-message"></textarea></dd>
+              </dl>
+              <div class="button"><input type="submit" value="送信"></div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        &copy; Portfolio
+      </footer>
+    </div>
   </body>
 </html>
